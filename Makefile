@@ -15,16 +15,6 @@ DB_NAME=rdb
 DB_PASSWORD=W0rdpress!
 DB_NODE_TYPE=DB-DEV-S
 
-# IMAGE MGMT
-
-.PHONY: build-image
-build-image:
-	docker build -t $(WP_IMAGE_TAG) wordpress/
-
-.PHONY: push-image
-push-image:
-	docker push $(WP_IMAGE_TAG)
-
 # DEPLOYMENT
 
 # Function to get the container ID
